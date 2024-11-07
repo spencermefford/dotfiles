@@ -7,6 +7,10 @@ echo "[CONFIG] GitHub Email and Username"
 git config --global user.email "spencermefford@meta.com"
 git config --global user.name "spencermefford"
 
+echo "[INSTALL] Powerline Fonts"
+gh repo clone powerline/fonts ~/.powerline-fonts
+~/.powerline-fonts/install.sh
+
 echo "[INSTALL] Ohmyzsh"
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 

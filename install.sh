@@ -12,7 +12,9 @@ gh repo clone powerline/fonts ~/.powerline-fonts
 ~/.powerline-fonts/install.sh
 
 echo "[INSTALL] Ohmyzsh"
-git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+if [ ! -d ~/.oh-my-zsh ]; then
+  git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+fi
 
 echo "[INSTALL] fzf (fuzzy find)"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf

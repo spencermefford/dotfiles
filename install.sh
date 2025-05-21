@@ -8,8 +8,10 @@ git config --global user.email "spencermefford@meta.com"
 git config --global user.name "spencermefford"
 
 echo "[INSTALL] Powerline Fonts"
-gh repo clone powerline/fonts ~/.powerline-fonts
-~/.powerline-fonts/install.sh
+if [ ! -d ~/.oh-my-zsh ]; then
+  gh repo clone powerline/fonts ~/.powerline-fonts
+  ~/.powerline-fonts/install.sh
+fi
 
 echo "[INSTALL] Ohmyzsh"
 if [ ! -d ~/.oh-my-zsh ]; then

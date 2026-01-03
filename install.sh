@@ -4,7 +4,7 @@ set -e
 GITHUB_USERNAME="spencermefford"
 
 echo "[CONFIG] GitHub Email and Username"
-git config --global user.email "spencermefford@meta.com"
+git config --global user.email "spencermefford@gmail.com"
 git config --global user.name "spencermefford"
 
 echo "[INSTALL] Powerline Fonts"

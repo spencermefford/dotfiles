@@ -164,3 +164,5 @@ setopt EXTENDED_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt HIST_VERIFY
 setopt SHARE_HISTORY
+
+alias agent='env -u CI agent'

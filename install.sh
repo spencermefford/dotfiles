@@ -19,8 +19,13 @@ if [ ! -d ~/.oh-my-zsh ]; then
 fi
 
 echo "[INSTALL] fzf (fuzzy find)"
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+rm -rf ~/.fzf
+gh repo clone junegunn/fzf ~/.fzf -- --depth 1
+rm -rf ~/.fzf/.git
 ~/.fzf/install --all
+
+echo "[INSTALL] Cursor CLI"
+curl https://cursor.com/install -fsS | bash
 
 echo "[INSTALL] Chezmoi"
 export BINDIR=$HOME/.local/bin

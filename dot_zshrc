@@ -117,6 +117,11 @@ if [[ -e /usr/share/nvm/init-nvm.sh ]]; then
   source '/usr/share/nvm/init-nvm.sh'
 fi
 
+# Init fnm (Node version manager)
+if command -v fnm &>/dev/null; then
+  eval "$(fnm env --use-on-cd --version-file-strategy=recursive --shell zsh)"
+fi
+
 if command -v gh &>/dev/null; then
   source <(gh completion -s zsh)
 fi
